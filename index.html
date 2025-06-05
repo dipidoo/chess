@@ -87,6 +87,10 @@ function onSnapEnd () {
   board.position(game.fen())
 }
 
+function pieceTheme(piece) {
+  return 'https://chessboardjs.com/img/chesspieces/wikipedia/' + piece + '.png'
+}
+
 var config = {
   draggable: true,
   position: 'start',
@@ -94,7 +98,8 @@ var config = {
   onDrop: onDrop,
   onMouseoutSquare: onMouseoutSquare,
   onMouseoverSquare: onMouseoverSquare,
-  onSnapEnd: onSnapEnd
+  onSnapEnd: onSnapEnd,
+  pieceTheme: pieceTheme
 }
 board = Chessboard('board', config)
   </script>
